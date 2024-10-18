@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .skeleton {
+    @apply relative overflow-hidden rounded;
+  }
+
+  .skeleton::before {
+    content: '';
+    @apply absolute inset-0 -translate-x-full;
+    @apply bg-gradient-to-r from-transparent via-slate-100 to-transparent;
+    @apply animate-[shimmer_2s_infinite];
+  }
+}
