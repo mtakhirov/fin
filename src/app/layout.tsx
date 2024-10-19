@@ -1,15 +1,15 @@
-import type { PropsWithChildren } from 'react';
-import type { Metadata, Viewport } from 'next';
+import type { PropsWithChildren } from 'react'
+import type { Metadata, Viewport } from 'next'
 
 // Utils
-import { cn } from '#utils';
+import { cn } from '#utils'
 
 // Fonts
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 
 // Styles
-import '#assets/css/tailwind.css';
+import '#assets/css/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   description:
     'Helps users track their expenses, manage budgets and receive financial insights directly via Telegram.',
-};
+}
 
 export const viewport: Viewport = {
   colorScheme: 'dark light',
@@ -28,15 +28,22 @@ export const viewport: Viewport = {
   initialScale: 1,
   minimumScale: 1,
   maximumScale: 1,
-};
+}
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html className={cn(GeistSans.variable, GeistMono.variable, 'antialiased')}>
-      <body className="bg-black text-white">{children}</body>
+    <html
+      lang='en-EN'
+      className={cn(
+        GeistSans.variable,
+        GeistMono.variable,
+        'top-[-25px] antialiased',
+      )}
+    >
+      <body className='bg-black text-white'>{children}</body>
     </html>
-  );
-};
-RootLayout.displayName = 'Root Layout';
+  )
+}
+RootLayout.displayName = 'Root Layout'
 
-export default RootLayout;
+export default RootLayout
