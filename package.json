@@ -5,11 +5,11 @@
   "type": "module",
   "description": "helps users track their expenses, manage budgets and receive financial insights directly via Telegram.",
   "scripts": {
-    "dev": "pnpm switch:env && next dev",
-    "build": "pnpm switch:env && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predev": "",
+    "prepare": "pnpm switch:env",
     "switch:env": "node scripts/switchEnv --dev"
   },
   "keywords": [
